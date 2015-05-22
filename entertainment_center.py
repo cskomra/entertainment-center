@@ -45,9 +45,20 @@ dr_who = media.TvShow("Dr. Who",
                       "Season 8",
                       "Episode 1",
                       "Sci-Fi")
+
+gilligans_island = media.TvShow("Gilligan's Island",
+                                "1h 0m",
+                                "A beautiful Island girl becomes Gilligan's devoted servant.",
+                                "http://gilligansislandfans.com/image/s3ep26.jpg",
+                                "www.youtube.com/watch?v=Q8jhb5NnADM",
+                                "Season 3",
+                                "Episode 26: Slave Girl",
+                                "CBS")
                       
 
 movies = [hobbit, wonderful_life, you_got_mail, princess_bride, casablanca, raiders_lost_ark]
+tvshows = [dr_who]
+fresh_tomatoes.open_tvshows_page(tvshows)
 fresh_tomatoes.open_movies_page(movies)
 
 
