@@ -49,7 +49,7 @@ dr_who = media.TvShow("Dr. Who",
 gilligans_island = media.TvShow("Gilligan's Island",
                                 "1h 0m",
                                 "A beautiful Island girl becomes Gilligan's devoted servant.",
-                                "http://gilligansislandfans.com/image/s3ep26.jpg",
+                                "http://ia.media-imdb.com/images/M/MV5BMjM1Mjg3NzU4M15BMl5BanBnXkFtZTgwNzE3ODMyMTE@._V1_SX640_SY720_.jpg",
                                 "www.youtube.com/watch?v=Q8jhb5NnADM",
                                 "Season 3",
                                 "Episode 26: Slave Girl",
@@ -57,7 +57,7 @@ gilligans_island = media.TvShow("Gilligan's Island",
                       
 
 movies = [hobbit, wonderful_life, you_got_mail, princess_bride, casablanca, raiders_lost_ark]
-tvshows = [dr_who]
+tvshows = [dr_who, gilligans_island]
 fresh_tomatoes.open_tvshows_page(tvshows)
 fresh_tomatoes.open_movies_page(movies)
 
