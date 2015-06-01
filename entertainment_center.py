@@ -1,5 +1,8 @@
 import media
 import fresh_tomatoes
+"""This module defines objects to load on entertainment center web pages and
+then calls scripts that open those pages"""
+
 
 hobbit = media.Movie("The Hobit",
                      "3h 2m",

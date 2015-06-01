@@ -2,6 +2,12 @@ import webbrowser
 import os
 import re
 
+"""This module:
+    - defines Entertainment Center HTML and CSS
+    - dynamically fills in Movie and TVShow templates based on objects from
+      entertainment_center.py
+    - contains code to run video trailers"""
+
 # Styles and scripting for the page
 main_page_head = '''
 <head>
@@ -124,6 +130,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+        <p>The quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by the dragon, Smaug</p>
 </div>
 '''
 
@@ -136,7 +143,9 @@ tvshow_tile_content = '''
 '''
 
 def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
+    """Creates a Movie section for the Entertainment Center web page.
+       Return HTML content for a Movie section of the page
+       Param  a Movie object"""
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -153,7 +162,9 @@ def create_movie_tiles_content(movies):
     return content
 
 def create_tvshow_tiles_content(tvshows):
-    # The HTML content for this section of the page
+    """Creates a TV Show section for the Entertainment Center web page.
+       Return HTML content for a TV Show section of the page
+       Param  a TvShow object"""
     content = ''
     for tvshow in tvshows:
         # Extract the youtube ID from the url
@@ -174,6 +185,9 @@ def create_tvshow_tiles_content(tvshows):
     return content
 
 def open_movies_page(movies):
+  """Creates and opens Movie HTML page.
+  Param:  a Movie object"""
+    
   # Create or overwrite the output file
   output_file = open('fresh_tomatoes.html', 'w')
 
@@ -190,6 +204,9 @@ def open_movies_page(movies):
 
 
 def open_tvshows_page(tvshows):
+  """Creates and opens TV Show HTML page
+  Param:  a TvShow object"""    
+
   # Create or overwrite the output file
   output_file = open('ft_tvshows.html', 'w')
 
