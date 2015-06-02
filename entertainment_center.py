@@ -12,13 +12,13 @@ hobbit = media.Movie("The Hobit",
 
 wonderful_life = media.Movie("It's a Wonderful Life",
                              "2h 12m",
-                             "After George Bailey (James Stewart) wishes he had never been born, an angel (Henry Travers) is sent to earth to make George's wish come true. George starts to realize how many lives he has changed and impacted, and how they would be different if he was never there.",
+                             "After George Bailey wishes he had never been born, an angel is sent to earth to make George's wish come true.",
                              "http://images.moviepostershop.com/its-a-wonderful-life-movie-poster-1946-1010458427.jpg",
                              "https://www.youtube.com/watch?v=LJfZaT8ncYk")
 
 you_got_mail = media.Movie("You've Got Mail",
                            "1h 59m",
-                          "Struggling boutique bookseller Kathleen Kelly (Meg Ryan) hates Joe Fox (Tom Hanks), the owner of a corporate Foxbooks chain store that just moved in across the street. When they meet online,",
+                          "Struggling boutique bookseller Kathleen Kelly hates Joe Fox, the owner of a corporate Foxbooks chain store that just moved in across the street.",
                           "http://ia.media-imdb.com/images/M/MV5BMTc1MzI5MTk2Ml5BMl5BanBnXkFtZTcwNDcxNzIzMQ@@._V1._SY317_CR13,0,214,317_.jpg",
                           "www.youtube.com/watch?v=znESQTt3L80")
 
@@ -42,11 +42,11 @@ raiders_lost_ark = media.Movie("Raiders of the Lost Ark",
 
 dr_who = media.TvShow("Dr. Who",
                       "1h 0m",
-                      "An eccentric yet compassionate extraterrestrial Time Lord zips through time and space to solve problems and battle injustice across the universe, traveling via the TARDIS (Time and Relative Dimensions in Space), which is his old and occasionally unreliable spaceship that resembles a blue police phone box (but changes its appearance depending on its surroundings) and is much, much larger inside than outside.",
-                      "http://www.gstatic.com/tv/thumb/tvbanners/185271/p185271_b_v7_ai.jpg",
-                      "https://www.youtube.com/watch?v=VkcHgI_TIYQ",
+                      "Creatures attack The Doctor and Clara while they are trapped on an Arctic base, and they receive help from a surprising source.",
+                      "http://www.tvshowsondvd.com/graphics/news3/DoctorWho_LastChristmas_DVD.jpg",
+                      "https://youtu.be/waSvCQSNruE",
                       "Season 8",
-                      "Episode 1",
+                      "Episode 13: Last Christmas",
                       "Sci-Fi")
 
 gilligans_island = media.TvShow("Gilligan's Island",
@@ -61,8 +61,8 @@ gilligans_island = media.TvShow("Gilligan's Island",
 
 movies = [hobbit, wonderful_life, you_got_mail, princess_bride, casablanca, raiders_lost_ark]
 tvshows = [dr_who, gilligans_island]
-fresh_tomatoes.open_tvshows_page(tvshows)
 fresh_tomatoes.open_movies_page(movies)
+fresh_tomatoes.create_tvshows_page(tvshows)
 
 
 

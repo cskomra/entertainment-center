@@ -130,7 +130,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-        <p>The quest of home-loving hobbit Bilbo Baggins to win a share of the treasure guarded by the dragon, Smaug</p>
+        <p>{storyline}</p>
 </div>
 '''
 
@@ -139,6 +139,7 @@ tvshow_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+        <p>{storyline}</p>
 </div>
 '''
 
@@ -157,7 +158,8 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            storyline=movie.storyline
         )
     return content
 
@@ -177,6 +179,7 @@ def create_tvshow_tiles_content(tvshows):
             movie_title = tvshow.title,
             poster_image_url = tvshow.poster_image_url,
             trailer_youtube_id = trailer_youtube_id,
+            storyline=tvshow.storyline,
             duration = tvshow.duration,
             season = tvshow.season,
             episode = tvshow.episode,
@@ -186,7 +189,7 @@ def create_tvshow_tiles_content(tvshows):
 
 def open_movies_page(movies):
   """Creates and opens Movie HTML page.
-  Param:  a Movie object"""
+  Param:  a collection of Movie objects"""
     
   # Create or overwrite the output file
   output_file = open('fresh_tomatoes.html', 'w')
@@ -203,9 +206,9 @@ def open_movies_page(movies):
   webbrowser.open('file://' + url, new=2) # open in a new tab, if possible
 
 
-def open_tvshows_page(tvshows):
-  """Creates and opens TV Show HTML page
-  Param:  a TvShow object"""    
+def create_tvshows_page(tvshows):
+  """Creates TV Show HTML page
+  Param:  a collection of TvShow objects"""    
 
   # Create or overwrite the output file
   output_file = open('ft_tvshows.html', 'w')
@@ -216,7 +219,4 @@ def open_tvshows_page(tvshows):
   # Output the file
   output_file.write(main_page_head + rendered_content)
   output_file.close()
-
-  # open the output file in the browser
-  url = os.path.abspath(output_file.name)
-  webbrowser.open('file://' + url, new=2) # open in a new tab, if possible  
+ 
