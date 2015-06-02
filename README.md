@@ -6,11 +6,13 @@
 
 ## Introduction ##
 
-The Entertainment Center displays the poster image and title for six movies.
+The Entertainment Center is made up of two web pages.  One page displays Movies and the other displays TV Shows.  
 
 ## Usage ##
 
-Open the file:  `entertainment_center.py`
+To begin, open the file:  `entertainment_center.py`.
 
-Click on any poster image to view the movie trailer.
+You will be presented with the Movies page from which you can navigate to/from TV Shows.
+
+Click on any poster image to view its  respective movie trailer.
  
