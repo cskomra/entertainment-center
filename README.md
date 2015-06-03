@@ -10,7 +10,7 @@ The Entertainment Center is made up of two web pages.  One page displays Movies 
 
 ## Usage ##
 
-To begin, open the file:  `entertainment_center.py`.
+To begin, run the file:  `entertainment_center.py`.
 
 You will be presented with the Movies page from which you can navigate to/from TV Shows.
 
