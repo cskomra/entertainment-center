@@ -214,9 +214,6 @@ def create_tvshows_page(tvshows):
   output_file = open('ft_tvshows.html', 'w')
 
   # Replace the placeholder for the tvshow tiles with the actual dynamically generated content
-  #TO DO  add {navbar} placeholder to main_page_content and replace w/ respective nav link
-  # if movies, provide link to tv shows
-  # if tv shows, provide link to movies
   rendered_content = main_page_content.format(movie_tiles=create_tvshow_tiles_content(tvshows),
                       navbar='''<a class="navbar-brand" href="fresh_tomatoes.html">View Movie Trailers</a>''')
 
