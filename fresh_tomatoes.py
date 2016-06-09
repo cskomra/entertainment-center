@@ -105,15 +105,14 @@ main_page_content = '''
         </div>
       </div>
     </div>
-    
+
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             Fresh Tomatoes
-            <a class="navbar-brand" href="fresh_tomatoes.html">Movie Trailers</a>
-            <a class="navbar-brand" href="ft_tvshows.html">TV Show Trailers</a>
+            {navbar}
           </div>
         </div>
       </div>
@@ -190,12 +189,13 @@ def create_tvshow_tiles_content(tvshows):
 def open_movies_page(movies):
   """Creates and opens Movie HTML page.
   Param:  a collection of Movie objects"""
-    
+
   # Create or overwrite the output file
   output_file = open('fresh_tomatoes.html', 'w')
 
   # Replace the placeholder for the movie tiles with the actual dynamically generated content
-  rendered_content = main_page_content.format(movie_tiles=create_movie_tiles_content(movies))
+  rendered_content = main_page_content.format(movie_tiles=create_movie_tiles_content(movies),
+                      navbar='''<a class="navbar-brand" href="ft_tvshows.html">View TV Show Trailers</a>''')
 
   # Output the file
   output_file.write(main_page_head + rendered_content)
@@ -208,15 +208,19 @@ def open_movies_page(movies):
 
 def create_tvshows_page(tvshows):
   """Creates TV Show HTML page
-  Param:  a collection of TvShow objects"""    
+  Param:  a collection of TvShow objects"""
 
   # Create or overwrite the output file
   output_file = open('ft_tvshows.html', 'w')
 
   # Replace the placeholder for the tvshow tiles with the actual dynamically generated content
-  rendered_content = main_page_content.format(movie_tiles=create_tvshow_tiles_content(tvshows))
+  #TO DO  add {navbar} placeholder to main_page_content and replace w/ respective nav link
+  # if movies, provide link to tv shows
+  # if tv shows, provide link to movies
+  rendered_content = main_page_content.format(movie_tiles=create_tvshow_tiles_content(tvshows),
+                      navbar='''<a class="navbar-brand" href="fresh_tomatoes.html">View Movie Trailers</a>''')
 
   # Output the file
   output_file.write(main_page_head + rendered_content)
   output_file.close()
- 
+
