@@ -57,10 +57,19 @@ gilligans_island = media.TvShow("Gilligan's Island",
                                 "Season 3",
                                 "Episode 26: Slave Girl",
                                 "CBS")
-                      
+
+mash = media.TvShow("M*A*S*H",
+                    "30 m",
+                    "Members of the 4077th throw a closing party before taking down camp for the last time.",
+                    "https://upload.wikimedia.org/wikipedia/en/e/ef/MASH_Goodbye.jpg",
+                    "https://www.youtube.com/watch?v=FM42Sp1Pqlo",
+                    "Season 11",
+                    "Goodbye, Farewell and Amen",
+                    "CBS")
+
 
 movies = [hobbit, wonderful_life, you_got_mail, princess_bride, casablanca, raiders_lost_ark]
-tvshows = [dr_who, gilligans_island]
+tvshows = [dr_who, gilligans_island, mash]
 fresh_tomatoes.open_movies_page(movies)
 fresh_tomatoes.create_tvshows_page(tvshows)
 
