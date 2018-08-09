@@ -13,7 +13,7 @@ hobbit = media.Movie("The Hobit",
 wonderful_life = media.Movie("It's a Wonderful Life",
                              "2h 12m",
                              "After George Bailey wishes he had never been born, an angel is sent to earth to make George's wish come true.",
-                             "http://images.moviepostershop.com/its-a-wonderful-life-movie-poster-1946-1010458427.jpg",
+                             "https://jonkuhrt.files.wordpress.com/2011/12/its-a-wonderful-life1.jpg",
                              "https://www.youtube.com/watch?v=LJfZaT8ncYk")
 
 you_got_mail = media.Movie("You've Got Mail",
